@@ -8,6 +8,10 @@ const Products = () => {
             .then((res) => res.json())
             .then((data) => setProducts(data.products));
     }, [])
+
+    const handleShowDetails = () => {
+
+    }
     return (
         <div>
             <h2>All Products</h2>
@@ -19,6 +23,7 @@ const Products = () => {
                         <p className="p-2">{product.category}</p>
                         <p>{product.price}</p>
                         <p>{product.description}</p>
+                        <button onClick={handleShowDetails} className="btn bg-sky-700 btn-ghost">Show Details</button>
                     </article>
                 })}
             </section>

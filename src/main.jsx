@@ -13,6 +13,7 @@ import NotFound from './pages/NotFound';
 import Navbar from './Layout/Navbar';
 import SignIn from './pages/SignIn';
 import Profile from './pages/Profile';
+import ProductDetails from './components/ProductDetails';
 
 const router = createBrowserRouter([
   {
@@ -32,8 +33,9 @@ const router = createBrowserRouter([
         element: <About></About>
       },
       {
-        path: '/products',
-        element: <Products></Products>
+        path: '/products/:id',
+        // element: <Products></Products>
+        element: <ProductDetails></ProductDetails>
       },
       {
         path: '/contact',
