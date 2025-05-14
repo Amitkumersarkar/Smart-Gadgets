@@ -12,6 +12,7 @@ import {
 import NotFound from './pages/NotFound';
 import Navbar from './Layout/Navbar';
 import SignIn from './pages/SignIn';
+import Profile from './pages/Profile';
 
 const router = createBrowserRouter([
   {
@@ -41,8 +42,11 @@ const router = createBrowserRouter([
       {
         path: '*',
         element: <NotFound></NotFound>
+      },
+      {
+        path: '/profile',
+        element: <Profile></Profile>
       }
-
     ]
   },
   {
