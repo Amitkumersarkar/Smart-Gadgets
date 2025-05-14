@@ -19,6 +19,16 @@ const SignIn = () => {
         // console.log(password);
         if (email === 'amit@gmail.com' && password === '1234') {
             navigate('/profile');
+            //backend data passing
+            {
+                const user = {
+                    name: 'amrita',
+                    email: 'amit@gamil.com',
+                    city: 'dhaka'
+                }
+                navigate('/profile', { state: user });
+
+            }
         }
         else {
             navigate('/');
